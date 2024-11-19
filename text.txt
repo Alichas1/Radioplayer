@@ -1,0 +1,45 @@
+1.What is OWASP and what is its primary mission as described in the article?
+
+OWASP står för The Open Web Application Security Project och är en internationell ideell organisation som är dedikerad till webbapplikationssäkerhet. Alla deras material är fritt tillgängliga och lättåtkomliga på deras webbplats. Deras material inkluderar dokumentation, videor, forum och deras mest kända projekt är OWASP Top 10.
+
+OWASP Top 10 rapporterar regelbundet om säkerhetsproblem för webbapplikationer och fokuserar på de 10 mest kritiska riskerna. De har samlat ett nätverk av professionella säkerhetsteam från hela världen för att fokusera på betydande problem.
+
+OWASPs primära uppdrag är att göra mjukvarusäkerhet synlig, så att både individer och organisationer kan fatta informerade beslut om mjukvarusäkerhetsrisker.
+
+----------------------------------------------------------------------------
+
+2.Explain the concept of "Injection". Provide an example of how an injection attack could compromise a web application's security. 
+
+Injection är en säkerhetsrisk som uppstår när otillförlitlig data skickas till en kodtolkare via ett formulär, inmatningsfält eller annan datainsändning till webbapplikationen. Till exempel kan en angripare manipulera och injicera skadlig kod eller kommandon i webbapplikationen genom otillräckligt validerad input. En injektionsattack sker när angripare kan utföra obehöriga åtgärder, kompromettera systemet och hämta känslig information, såsom användarnamn och lösenord.
+
+De vanligaste typerna av attacker är att infoga skadlig SQL-injektion i inmatningsfält som utförs av databasen. Kommandoinjektion sker genom att infoga ett skadligt kommando i systemet där applikationen körs på det primära operativsystemet.
+
+----------------------------------------------------------------------------
+
+3.Explain two strategies to prevent Broken Authentication vulnerabilities. 
+
+Det finns två viktiga strategier för att förhindra Broken Authentication:
+
+Den första strategin är att implementera ett ytterligare säkerhetslager utöver användarnamn och lösenord, såsom tvåfaktorsautentisering 2FA. När detta är implementerat skickas ett automatiskt meddelande till användarens telefon som innehåller en kod för att verifiera om det verkligen är användaren. Även om en angripare får tillgång till användarens lösenord och e-postadress, behöver de ändå få tillgång till den andra autentiseringsfaktorn.
+
+Den andra metoden är att förhindra det med hjälp av säker sessionhantering. Säker sessionhantering är en mekanism som spårar och skyddar användarens interaktion med webbapplikationen under en tidsperiod eller när de är inloggade. Svag sessionhantering kan leda till att angripare kapar eller imiterar en giltig session för att komma åt känslig användardata. Därför innebär säker sessionhantering att man använder starka tokens (ID), sessionscookies och förhindrar sessionfixering och sessionkapning.
+
+----------------------------------------------------------------------------
+
+4.Describe the potential consequences of Insecure Deserialization in web applications. How can developers protect against such attacks?
+
+
+När din webbapplikation tar emot en mängd informationsdata, måste användaren kontrollera att den är säker innan den öppnas, annars kan angriparen skapa skadlig data eller objekt som påverkar användarens webbapplikation. Utvecklare måste vidta proaktiva åtgärder för att undvika att deserialisera otillförlitlig data, validera all indata, använda säkra serialiseringsformat och tillämpa ytterligare skyddsåtgärder som digitala signaturer samt övervaka för misstänkt aktivitet.
+
+----------------------------------------------------------------------------
+
+5. Briefly define Cross-Site Scripting (XSS) as outlined in the article and list two methods suggested in the article to prevent XSS attacks in web applications.
+
+
+Cross-site scripting (XSS) är en säkerhetsbrist där angriparen kan injicera skadliga skript inom webbsidor som visas för användare. Detta kan potentiellt leda till att känslig data som cookies tas, sprider skadlig kod och utför obehöriga åtgärder.
+
+Den första metoden är inputvalidering och sanering, och hur den hjälper är att säkerställa att data som kommer från misstänkta källor noggrant saneras innan den används i webbläsaren. Genom detta så förhindras det skadliga skriptet injiceras i applikationen.
+
+Den andra metoden är utmatningskodning (Output Encoding), och hur den hjälper är genom att skydda mot XSS för att säkerställa att användarens indata säkert skickas av webbläsaren som text snarare än som exekverbar kod.
+
+

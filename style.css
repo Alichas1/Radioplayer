@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+}
+
+.image {
+  height: 200px;
+  width: 200px;
+  border-right: 2px solid black;
+}
+
+#channels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.channel {
+  display: flex;
+  border: 1px solid black;
+}
+
+.channel2 {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+h2 {
+  font-size: 2em;
+  color: white;
+  text-indent: -110px;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+audio {
+  margin: 20px;
+}
